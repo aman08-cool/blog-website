@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .headerLi {
+    @apply text-primaryColor hover:text-secondaryColor cursor-pointer duration-300;
+  }
+}
+
+body {
+  @apply bg-backColor;
+}
