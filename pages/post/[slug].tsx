@@ -8,11 +8,13 @@ import Comment from '../../components/Comment';
 
 interface Props
 {
-  post: Post;
+  post: typeof Post;
 }
 
 
-const Post = ({ post }: Props) =>
+
+
+const Post: any = ({ post }: Props) =>
 {
   const [dataset, setDataset] = useState<string | undefined>(undefined);
   const [projectId, setProjectId] = useState<string | undefined>(undefined);
@@ -81,7 +83,7 @@ const Post = ({ post }: Props) =>
         <div className='w-full flex flex-col p-10 my-10 mx-auto shadow-bgColor shadow-lg space-y-2'>
           <h3 className="text-3xl font-titleFont font-semibold">Comments</h3>
           <hr />
-          {post.comments.map((comment) => (
+          {post.comments.map((comment: any) => (
             <div key={comment._id}>
               <p>
                 <span className='text-secondaryColor'>{comment.name}</span>{" "}
@@ -108,7 +110,7 @@ export const getStaticPaths = async () =>
               }
           }`;
   const posts = await sanityClient.fetch(query);
-  const paths = posts.map((post: Post) => ({
+  const paths = posts.map((post: typeof Post) => ({
     params: {
       slug: post.slug.current,
     }

@@ -16,9 +16,9 @@ const Header = () =>
             <Image width={160} height={80} src={logo_2} alt="BlogLogo" />
           </div>
         </Link>
-        <div className="flex items-center justify-center text-center p-1 font-sans md:font-serif font-bold rounded hover:text-transparent text-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] duration-500">
+        {/* <div className="flex items-center justify-center text-center p-1 font-sans md:font-serif font-bold rounded hover:text-transparent text-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] duration-500">
           “Welcome to Aman's Blog”
-        </div>
+        </div> */}
         <div className="flex items-center gap-8 text-lg">
           <div className="flex items-center gap-1">
             <IoLogoFreebsdDevil className="text-4xl text-gray-500 group-hover:text-blue-500 duration-300" />
